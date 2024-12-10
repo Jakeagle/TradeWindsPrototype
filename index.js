@@ -1,4 +1,4 @@
-const socket = io("http://localhost:3000");
+const socket = io("https://tradewindsprototype-gnbgdcg4gsd4fwb8.centralus-01.azurewebsites.net");
 
 // Get the button element and the status display
 const startButton = document.getElementById("startButton");
