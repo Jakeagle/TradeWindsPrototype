@@ -18,7 +18,7 @@ startButton.addEventListener("click", () => {
 // Event listener for the "Run Test Report Now" button
 testButton.addEventListener("click", () => {
   // Send a POST request to trigger the report generation and sending script
-  fetch("/triggerReport", {
+  fetch("https://tradewindsprototype-gnbgdcg4gsd4fwb8.centralus-01.azurewebsites.net/triggerReport", {
     method: "POST", // Assuming it's a POST request
     headers: {
       "Content-Type": "application/json",
