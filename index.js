@@ -18,7 +18,7 @@ startButton.addEventListener("click", () => {
 // Event listener for the "Run Test Report Now" button
 testButton.addEventListener("click", () => {
   // Send a POST request to trigger the report generation and sending script
-  fetch("https://tradewindsprototype-gnbgdcg4gsd4fwb8.centralus-01.azurewebsites.net/triggerReport", {
+  fetch("/triggerReport", {
     method: "POST", // Assuming it's a POST request
     headers: {
       "Content-Type": "application/json",
@@ -47,4 +47,21 @@ socket.on("simulationStarted", (message) => {
 socket.on("dataGenerated", (message) => {
   statusDisplay.textContent = message;
   statusDisplay.style.color = "blue";
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const introScreen = document.getElementById("introScreen");
+  const loginScreen = document.getElementById("loginScreen");
+
+  console.log("DOM loaded");
+  if (introScreen) console.log("Intro screen found");
+  if (loginScreen) console.log("Login screen found");
+
+  setTimeout(() => {
+    introScreen.style.display = "none";
+    console.log("Intro screen hidden");
+
+    loginScreen.classList.add("show", "animate-slide-up");
+    console.log("Login screen classes applied");
+  }, 3000);
 });
