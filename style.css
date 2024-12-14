@@ -1,0 +1,172 @@
+/* Reset Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f0f0f0; /* Simple, clean background */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Logo Animation */
+.logo-container {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: translate(-25%, -25%); /* Centers the logo */
+  opacity: 0;
+  animation: fade-in 1.5s ease-in-out forwards; /* Fade in animation */
+  z-index: 10; /* Ensure it's above the background */
+}
+
+.logo {
+  width: 800px;
+  margin: auto;
+}
+
+/* Login Box */
+.login-container {
+  opacity: 0;
+  transform: translateY(50px); /* Start slightly below view */
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  height: 70%;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  animation: fade-and-rise 1s ease-in-out 1.8s forwards; /* Fade & rise with delay */
+}
+
+/* Left Section */
+.sec1 {
+  flex: 1;
+  background-color: #f96b5c; /* TradeWinds Blue */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.sec1 h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.sec1 p {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.signUpBtn {
+  background-color: transparent;
+  border-radius: 25px;
+  border: 2px solid white;
+  color: white;
+  font-size: 1rem;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.signUpBtn:hover {
+  background-color: #d64d42;
+  color: white;
+}
+
+/* Right Section */
+.sec2 {
+  flex: 1.5;
+  padding: 2rem;
+  background-color: white; /* TradeWinds Coral */
+  color: #f96b5c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sec2 h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+form {
+  width: 80%;
+}
+
+.form-label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  outline: none;
+  font-size: 1rem;
+}
+
+.form-control:focus {
+  border-color: #d64d42; /* Coral border on focus */
+  box-shadow: 0px 0px 5px rgba(255, 109, 89, 0.5);
+}
+
+.signInBtn {
+  background-color: #f96b5c; /* Neutral button color */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.signInBtn:hover {
+  background-color: #d64d42;
+  color: white;
+}
+
+.signInBtn:active {
+  transform: scale(0.98);
+}
+
+/* Animations */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-and-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); /* Start lower */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Rise to position */
+  }
+}
