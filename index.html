@@ -3,37 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TradeWinds Prototype</title>
+    <title>TradeWinds Login</title>
+
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
-    <script
-      src="https://cdn.socket.io/4.6.0/socket.io.min.js"
-      integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- Link to your index.js file -->
-    <script src="index.js" defer></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js"></script>
   </head>
-  <body
-    class="d-flex justify-content-center align-items-center vh-100 bg-light"
-  >
-    <div class="text-center">
-      <h1 class="mb-4">TradeWinds</h1>
-      <p class="mb-4">
-        Click the button below to start tracking sales and subscriptions!
-      </p>
-      <button id="startButton" class="btn btn-primary btn-lg">
-        Start TradeWinds
-      </button>
-      <button id="testButton" class="btn btn-secondary btn-lg mt-4">
-        Run Test Report Now
-      </button>
-      <div id="statusMessage" class="mt-4 text-success"></div>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+    <!-- Intro Screen -->
+    <div class="logo-container" id="introScreen">
+      <img
+        src="SailShip (Whiteboard).png"
+        alt="TradeWinds Logo"
+        class="logo"
+        id="logo"
+      />
     </div>
+
+    <!-- Login Screen -->
+    <div class="login-container" id="loginScreen">
+      <!-- Left Section -->
+      <div class="sec1">
+        <h1 class="welcomeBackSignOn">Welcome Back!</h1>
+        <h3 class="signInText">Sign in to continue, or sign up below.</h3>
+        <a href="https://trinitycapitalsignup.netlify.app" class="signUpBtn">
+          Sign Up
+        </a>
+      </div>
+
+      <!-- Right Section -->
+      <div class="sec2">
+        <h1 class="welcomeBackSignOn">Sign in to TradeWinds</h1>
+        <h3 class="signInText">Use your information below:</h3>
+        <form>
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input
+              type="text"
+              id="username"
+              class="form-control"
+              placeholder="Enter your username"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="pin" class="form-label">Password</label>
+            <input
+              type="password"
+              id="pin"
+              class="form-control"
+              placeholder="Enter your Password"
+              required
+            />
+          </div>
+          <button type="submit" class="signInBtn">Sign In</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="index.js" defer></script>
   </body>
 </html>
