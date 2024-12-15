@@ -74,7 +74,108 @@
       </div>
     </div>
 
+    <!-- Dashboard Screen -->
+    <div class="dashboard-container d-none" id="dashboardScreen">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="SailShip (Whiteboard).png"
+              alt="TradeWinds Logo"
+              height="30"
+            />
+            TradeWinds
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Reports</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Settings</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Dashboard Content -->
+      <div class="container mt-4">
+        <h1>Dashboard</h1>
+
+        <!-- Search Section -->
+        <div class="row mb-4">
+          <div class="col-md-4">
+            <label for="startDate" class="form-label">Start Date</label>
+            <input type="date" id="startDate" class="form-control" />
+          </div>
+          <div class="col-md-4">
+            <label for="endDate" class="form-label">End Date</label>
+            <input type="date" id="endDate" class="form-control" />
+          </div>
+          <div class="col-md-4">
+            <label for="searchKeywords" class="form-label"
+              >Search Keywords</label
+            >
+            <input
+              type="text"
+              id="searchKeywords"
+              class="form-control"
+              placeholder="Enter keywords"
+            />
+          </div>
+        </div>
+
+        <button class="btn btn-primary mb-3" id="searchBtn">Search</button>
+
+        <!-- Results Table -->
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Customer Name</th>
+                <th>Product</th>
+                <th>Amount</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody id="resultsTable">
+              <!-- Dynamic Results Go Here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="text-center mt-4">
+        <p>
+          &copy; 2024 TradeWinds |
+          <a href="https://fergusonsoftwaresolutions.net">Visit Our Website</a>
+        </p>
+      </footer>
+    </div>
+
     <!-- JavaScript -->
     <script src="index.js" type="module"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76A9YdVHmXfZjE+Dl6loq8sMbZ9U4zUU1zW5vjxLA9jG4lA7Kx0f5we9KK3cNf9"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
